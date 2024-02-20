@@ -14,7 +14,8 @@
     font-family: var(--Font01);
 }
 
-body{
+html, body {
+    overflow-x: hidden;
     width: 100vw;
     height: 100vh;
 }
@@ -79,7 +80,7 @@ li > a{
 }
 
 main{
-    padding: 70px;
+    padding: 8%;
     max-width: 1350px;
     color: var(--Cor02);
 }
@@ -98,13 +99,13 @@ main{
     padding: 15px;
     margin: 15px;
     border-radius: 12px;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;  
 }
 
 .secao img{
     width: 125px;
     height: 175px;
+    
 }
 
 .secao-conteudo{
@@ -114,7 +115,7 @@ main{
 }
 
 .imagem-fundo1{
-    width: 170px;
+    width: 45%;
     background-image: url(imagens/desf-corretora.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -126,7 +127,7 @@ main{
 }
 
 .imagem-fundo2{
-    width: 170px;
+    width: 45%;
     background-image: url(imagens/desf-corretor.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -170,12 +171,12 @@ textarea{
 
 .campo-input{
     border-radius: 5px;
-    height: 32px;
+    height: 30px;
     padding: 3px 10px;
 }
 
 #camMsg{
-    height: 150px;
+    height: 140px;
 }
 
 #numT{
@@ -217,31 +218,12 @@ textarea{
     background-image: url(imagens/imovel.jpg);
     background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
     height: 400px;
     width: 380px;
     margin: 15px;
     border-radius: 12px;
     box-shadow: 2px 2px 3px var(--Cor02);
-}
-
-#modal{
-    position: relative;
-    top: 105%;
-    display: flex;
-    justify-content: center;
-}
-
-#botao-modal{
-    background-color: var(--Cor01);
-    text-align: center;
-    width: 325px;
-    height: 30px;
-    border: none;
-    border-radius: 8px;
-    line-height: 30px;
-    color:var(--Cor04);
-    font-weight: bold;
-    font-size: 1em;
 }
 
 /* CAMPO 5 */
@@ -302,6 +284,98 @@ textarea{
     justify-items: center;
 }
 
-@media (max-width: 1100px) {
+.menu-hamburguer {
+    display: none;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: auto;
+}
+
+@media (max-width: 1050px) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--Cor02);
+        z-index: 1;
+    }
+
+    .div-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; 
+        padding: 0 20px; 
+    }
+
+    .menu-hamburguer {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .menu {
+        margin-left: auto;
+    }
+
+    .menu-hamburguer {
+        display: flex; 
+    }
+}
+
+@media (max-width: 758px) {
+    html{
+        width: 100%;
+        margin: auto;
+    }
+    
+    .menu li {
+        padding: 5px;
+    }
+
+    #rodapeResp{
+        display: none;
+    }
+}
+
+@media (max-width: 580px) {
+    #campoRegra{
+        margin: 35px 0px;
+    }
+    .campoNum{
+        height: 35px;
+        width: 170px;
+    }
+    .imagem-fundo1{
+        width: 50%;
+    }
+    
+    .imagem-fundo2{
+        width: 50%;
+    }
+
+    .menu-hamburguer {
+        margin-left: auto; 
+    }
+    #campoDeMsg {
+        gap: 10px;
+        margin: 10px 0 10px 0;
+    }
+}
+
+@media (max-width: 405){
+    
+    .campo-input{
+        height: 28px;
+        width: 88%;
+    }
+    
+    #camMsg{
+        height: 120px;
+    }
     
 }

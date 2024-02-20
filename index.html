@@ -16,21 +16,20 @@
                     <img src="imagens/logo-imovelguide1.png" alt="">
                     <p>IMÓVEL <br> GUIDE</p>
                 </div>
-                <ul class="menu">
-                    <li><a href="#">Condomínios</a></li>
-                    <li><a href="#">Fórum</a></li>
-                    <li><a href="#">Guia</a></li>
-                    <li><a href="#">Artigos</a></li>
-                    <li><a href="#">Ferramentas</a></li>
-                </ul>
+            <div class="menu-hamburguer">&#9776;</div>
             </div>
+            <ul class="menu">
+                <li><a href="#">Condomínios</a></li>
+                <li><a href="#">Fórum</a></li>
+                <li><a href="#">Guia</a></li>
+                <li><a href="#">Artigos</a></li>
+                <li><a href="#">Ferramentas</a></li>
+            </ul>
             <div class="div-menu">
                 <ul class="menu">
                     <li><a href="#">Cotar Imóvel</a></li>
                     <li><a href="#">Planos</a></li>
                     <li><a href="#">Entrar</a></li>
-                </ul>
-                <ul>
                     <li id="cadastro"><a href="#">CADASTRE-SE</a></li>
                 </ul>
             </div>
@@ -98,7 +97,7 @@
     </main>
 
     <footer id="rodape">
-        <ul class="rodape-flex">
+        <ul id="rodapeResp" class="rodape-flex">
             <li>Termos</li>
             <li>Contatos</li>
             <li>Sobre</li>
@@ -135,5 +134,9 @@
     });
     }
 
+    document.querySelector('.menu-hamburguer').addEventListener('click', function () {
+        const menu = document.querySelector('.menu');
+        menu.style.display = menu.style.display === 'none' || menu.style.display === '' ? 'flex' : 'none';
+    });
 </script>
 </html>
