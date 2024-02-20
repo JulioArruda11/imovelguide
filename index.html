@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imóvel Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/logo-ico.ico" type="image/x-icon">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="div-menu">
+                <div class="logo">
+                    <img src="imagens/logo-imovelguide1.png" alt="">
+                    <p>IMÓVEL <br> GUIDE</p>
+                </div>
+                <ul class="menu">
+                    <li><a href="#">Condomínios</a></li>
+                    <li><a href="#">Fórum</a></li>
+                    <li><a href="#">Guia</a></li>
+                    <li><a href="#">Artigos</a></li>
+                    <li><a href="#">Ferramentas</a></li>
+                </ul>
+            </div>
+            <div class="div-menu">
+                <ul class="menu">
+                    <li><a href="#">Cotar Imóvel</a></li>
+                    <li><a href="#">Planos</a></li>
+                    <li><a href="#">Entrar</a></li>
+                </ul>
+                <ul>
+                    <li id="cadastro"><a href="#">CADASTRE-SE</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+        <section class="secao" id="corretores">       
+            <div class="secao-conteudo">
+                <div class="imagem-fundo1"><img src="imagens/corretora.jpg" alt="Foto da corretora Gabriella"></div>
+                <div class="corretores-campo">
+                    <h3>Gabriella da Silva</h3>
+                    <p>3.000 pontos</p>
+                    <p><button class="botao-tel" id="tel0" onclick="telefone(0, 'tel0')">ver telefone</button></p>
+                </div>
+            </div>
+            <div class="secao-conteudo">
+                <div class="imagem-fundo2"><img src="imagens/corretor.jpg" alt="Foto do corretor Murillo"></div>
+                <div class="corretores-campo">
+                    <h3>Murillo de Souza</h3>
+                    <p>1.260 pontos</p>
+                    <p><button class="botao-tel" id="tel1" onclick="telefone(1, 'tel1')">ver telefone</button></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao" id="mensagem">
+            <h2>Mande uma mensagem:</h2>
+            <form id="campoDeMsg">
+                <input type="text" class="campo-input" name="cpf" id="cpf" required maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder=" Digite seu CPF">
+                <input type="text" class="campo-input" name="telefoneMsg" id="telMsg" required maxlength="14" placeholder="(99) 99999-9999">
+                <textarea name="campoMsg" id="camMsg" class="campo-input" cols="30" rows="10" required placeholder="Digite o assunto" ></textarea>
+            </form>
+            
+            <button class="botao-msg">Enviar Mensagem</button>
+        </section>
+        
+        <section class="secao" id="regra3">
+            <h2>Regra de 3</h2>
+            <form id="campoRegra">
+                <input type="text" class="campoNum" name="num1" id="num1">
+                <input type="text" class="campoNum" name="num2" id="num2">
+                <input type="text" class="campoNum" name="num3" id="num3">
+                <input type="text" class="campoNum" name="numT" id="numT">
+            </form>
+            <button class="botao-msg" onclick="calcular()">Calcular</button>
+        </section>
+
+        <section class="img" id="campo4">
+            <div id="modal">
+                <button id="botao-modal" onclick="">ABRIR IMAGEM NO MODAL</button>
+            </div>
+        </section>
+        
+        <section class="img" id="campo-captura">
+            <div id="campo5">
+                <p id="texto-caixa">Imovel Guide</p>
+                <button onclick="captura(1)" id="download">Download</button>
+            </div>
+        </section>
+        
+        <section class="img" id="campo6">
+           
+        </section>
+    </main>
+
+    <footer id="rodape">
+        <ul class="rodape-flex">
+            <li>Termos</li>
+            <li>Contatos</li>
+            <li>Sobre</li>
+        </ul>
+
+        <div class="rodape-flex">
+            <p> © Copyright 2024. Todosos direitos reservados.</p>
+            <div class="rodape-flex" style="gap: 5px;">
+                <img src="imagens/logo-imovelguide1.png" alt="">
+                <p>IMÓVEL <br> GUIDE</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    var corretorTelefone = ["(11) 98723-5306", "(11) 98221-1070"]
+    function telefone(x, id) {
+      var tel = document.getElementById(id);
+      tel.innerHTML = corretorTelefone[x];
+    }
+    
+    function calcular(){
+        var n1 = parseFloat(document.getElementById('num1').value);
+        var n2 = parseFloat(document.getElementById('num2').value);
+        var n3 = parseFloat(document.getElementById('num3').value);
+        var total = (n2 * n3) / n1;
+        document.getElementById('numT').value = total;
+
+    }
+
+    function captura(){ 
+        html2canvas(document.querySelector("#campo-captura")).then(canvas => { 
+        document.body.appendChild(canvas)
+    });
+    }
+
+</script>
+</html>

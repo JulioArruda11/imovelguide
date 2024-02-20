@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --Cor01: #FE6613;
+    --Cor02: #1B2653;
+    --Cor03: #787878;
+    --Cor04: #ffffff;
+    --Font01: "Roboto", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--Font01);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    background-color: var(--Cor02);
+    color: var(--Cor04);
+}
+
+nav{
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    margin: auto;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.div-menu{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+
+li{
+    list-style: none;
+}
+
+li > a{
+    text-decoration: none;
+    color: var(--Cor04);
+}
+
+#cadastro{
+    border: 3px solid var(--Cor04);
+    border-radius: 20px;
+    padding: 7px 30px
+}
+
+#cadastro:hover{
+    border: 3px solid var(--Cor01);
+    color: var(--Cor01);
+}
+
+#conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: auto;
+}
+
+main{
+    padding: 70px;
+    max-width: 1350px;
+    color: var(--Cor02);
+}
+
+/* CAMPO 1 */
+#corretores{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.secao{
+    border: 2px solid gray;
+    width: 380px;
+    height: 400px;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    
+}
+
+.secao img{
+    width: 125px;
+    height: 175px;
+}
+
+.secao-conteudo{
+    display: flex;
+    gap: 20px;
+    align-items: center ; 
+}
+
+.imagem-fundo1{
+    width: 170px;
+    background-image: url(imagens/desf-corretora.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    border-radius: 7px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 5px var(--Cor02);
+}
+
+.imagem-fundo2{
+    width: 170px;
+    background-image: url(imagens/desf-corretor.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    border-radius: 7px;
+    border: 0.5px solid black;
+    box-shadow: 1px 1px 3px var(--Cor02);
+}
+
+.corretores-campo{
+    display: flex;
+    flex-direction: column;
+}
+
+.botao-tel{
+    background: none;
+    border: none;
+    color: var(--Cor01);
+    text-decoration: underline;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.botao-tel:hover{
+    color: #be4b09;
+}
+
+textarea{
+    resize: none;
+}
+
+/* CAMPO 2*/
+
+#campoDeMsg{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0 20px 0;
+}
+
+.campo-input{
+    border-radius: 5px;
+    height: 32px;
+    padding: 3px 10px;
+}
+
+#camMsg{
+    height: 150px;
+}
+
+#numT{
+    border: 3px solid var(--Cor01);
+}
+
+.botao-msg{
+    background-color: var(--Cor01);
+    color: var(--Cor04);
+    border: none;
+    border-radius: 5px;
+    padding: 3px 15px;
+    font-weight: bold;
+    font-size: 1em; 
+}
+
+/* CAMPO 3 */
+
+#campoRegra{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin: 90px 0px;
+}
+
+.campoNum{
+    height: 35px;
+    width: 120px;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+
+/* CAMPO 4 */
+
+.img{
+    background-image: url(imagens/imovel.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
+    width: 380px;
+    margin: 15px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 3px var(--Cor02);
+}
+
+#modal{
+    position: relative;
+    top: 105%;
+    display: flex;
+    justify-content: center;
+}
+
+#botao-modal{
+    background-color: var(--Cor01);
+    text-align: center;
+    width: 325px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    line-height: 30px;
+    color:var(--Cor04);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* CAMPO 5 */
+
+#campo5{
+    position: relative;
+    top: 82%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    gap: 40px;
+}
+
+#texto-caixa{
+    background-color: #f83a00a8;
+    text-align: center;
+    width: 290px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    color:var(--Cor04);
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 30px;
+}
+
+#download{
+    background-color: var(--Cor01);
+    text-align: center;
+    width: 190px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    line-height: 30px;
+    color:var(--Cor04);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#rodape{
+    margin-top: 50px;
+    background-color: var(--Cor02);
+    color: var(--Cor04);
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    margin: auto;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.rodape-flex{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-items: center;
+}
+
+@media (max-width: 1100px) {
+    
+}
