@@ -226,6 +226,25 @@ textarea{
     box-shadow: 2px 2px 3px var(--Cor02);
 }
 
+#modal{
+    position: relative;
+    top: 102%;
+    text-align: center;
+}
+
+#botao-modal{
+    background-color: var(--Cor01);
+    text-align: center;
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    line-height: 30px;
+    color:var(--Cor04);
+    font-weight: bold;
+    font-size: 1em;
+}
+
 /* CAMPO 5 */
 
 #campo5{
